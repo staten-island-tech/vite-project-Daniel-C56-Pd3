@@ -62,8 +62,14 @@ music.forEach((music) =>{
         <h2>${music.Name}</h2>
         <img src="${music.Image}"/>
         <p>genre: ${music.Genre} </p>
-        <button class = "btn_water" data-name="${waters.name}"|>Add To Cart</button>
+        <button class = "btn_music" data-name="${music.Name}"|>Add To Playlist</button>
         </div>`
     );
 }
 )
+document.querySelector(".btn").addEventListener("click", function () {
+  if (document.body.classList.contains("Indie Rock")) {
+  } else {
+    document.body.classList.contains("Pop Rock");
+  }
+});
