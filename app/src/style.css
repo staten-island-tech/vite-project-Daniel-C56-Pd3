@@ -2,9 +2,16 @@
   --primary-color: white;
   --secondary-color: black;
 }
+.Title{
+    font-size: 40px;
+    font-style: Caveat Brush;
+    text-align: center;
+    width: 500px;
+    margin: 25px auto;
+    border-radius: 15px;
+}
 button {
   background-color: var(--primary-color);
-  color: white;
 }
 .container{
     width: 90vw;
@@ -14,7 +21,7 @@ button {
     flex-wrap: wrap;
 }
 .card{
-    width: 30%;
+    width: 15%;
     height: 300px;
     margin: 15px 0;
     font-size: 20px;
@@ -25,4 +32,8 @@ button {
     color: black;
     box-shadow: 5px 5px 15px grey;
     transition: 0.3s;
+}
+.card img{
+  max-width: 100px;
+  height: auto;
 }

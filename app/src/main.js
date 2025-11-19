@@ -4,7 +4,7 @@ const music = [
     Name:"Do I Wanna Know ?",
     Artist: "Arctic Monkeys",
     Genre: "Indie Rock",
-    Image: "Picture/DoIWannaKnow",
+    Image: "src/Picture/DoIWannaKnow.png",
   },
     {
     Name:"I Wanna Be Yours",
