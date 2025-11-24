@@ -48,7 +48,7 @@ const music = [
     Genre:"Pop Rock",
     Image: "src/Picture/LoveStory.png",
   },
-    {
+    { 
     Name:"Cruel Summer",
     Artist:"Taylor Swift",
     Genre:"Pop Rock",
