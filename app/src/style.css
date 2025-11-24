@@ -1,6 +1,8 @@
 :root {
   --primary-color: white;
   --secondary-color: black;
+  --primary: var(--light-blue);
+  --secondary: var(--dark-blue);
 }
 .Title{
     font-size: 40px;
