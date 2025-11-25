@@ -56,7 +56,7 @@ const music = [
   },
 ]
 music.forEach((music) =>{
-    document.querySelector(".containe`  r").insertAdjacentHTML(
+    document.querySelector(".container").insertAdjacentHTML(
         "afterbegin",
         `<div class="card" data-brand="${music.Genre}" >
         <h2>${music.Name}</h2>
