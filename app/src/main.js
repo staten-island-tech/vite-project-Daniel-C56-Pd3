@@ -67,7 +67,7 @@ music.forEach((music) =>{
     );
 }
 )
-document.querySelector(".btn").addEventListener("click", function () {
+document.querySelector(".btn_music").addEventListener("click", function () {
   if (document.body.classList.contains("Indie Rock")) {
   } else {
     document.body.classList.contains("Pop Rock");
