@@ -2,13 +2,15 @@
   --black: #000000;
   --white: #ffffff;
   --primary: var(--black);
-  --primary: var(--white);
+  --secondary: var(--white);
 }
 .dark{
-  
+  --primary: var(--black);
+  --secondary: var(--white);
 }
 .light{
-
+--primary: var(--white);
+  --secondary: var(--black);
 }
 .Title{
     font-size: 40px;
