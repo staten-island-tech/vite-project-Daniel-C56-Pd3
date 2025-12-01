@@ -54,7 +54,79 @@ const music = [
     Genre:"Pop Rock",
     Image: "src/Picture/CruelSummer.png",
   },
-]
+    {
+    Name:"Viva La Vida",
+    Artist:"Coldplay",
+    Genre:"Alternative Rock",
+    Image:"src/Picture/VivaLaVida.png",
+  },
+  {
+    Name:"Yellow",
+    Artist:"Coldplay",
+    Genre:"Alternative Rock",
+    Image:"src/Picture/Yellow.png",
+  },
+  {
+    Name:"Paradise",
+    Artist:"Coldplay",
+    Genre:"Alternative Rock",
+    Image:"src/Picture/Paradise.png",
+  },
+  {
+    Name:"Sugar",
+    Artist:"Maroon 5",
+    Genre:"Pop",
+    Image:"src/Picture/Sugar.png",
+  },
+  {
+    Name:"Animals",
+    Artist:"Maroon 5",
+    Genre:"Pop",
+    Image:"src/Picture/Animals.png",
+  },
+  {
+    Name:"Memories",
+    Artist:"Maroon 5",
+    Genre:"Pop",
+    Image:"src/Picture/Memories.png",
+  },
+  {
+    Name:"Blinding Lights",
+    Artist:"The Weeknd",
+    Genre:"R&B / Synthwave",
+    Image:"src/Picture/BlindingLights.png",
+  },
+  {
+    Name:"Starboy",
+    Artist:"The Weeknd",
+    Genre:"R&B / Pop",
+    Image:"src/Picture/Starboy.png",
+  },
+  {
+    Name:"The Hills",
+    Artist:"The Weeknd",
+    Genre:"R&B / Alternative",
+    Image:"src/Picture/TheHills.png",
+  },
+  {
+    Name:"Diamonds",
+    Artist:"Rihanna",
+    Genre:"Pop",
+    Image:"src/Picture/Diamonds.png",
+  },
+  {
+    Name:"Umbrella",
+    Artist:"Rihanna",
+    Genre:"Pop",
+    Image:"src/Picture/Umbrella.png",
+  },
+  {
+    Name:"Where Have You Been",
+    Artist:"Rihanna",
+    Genre:"Pop",
+    Image:"src/Picture/Work.png",
+  },
+];
 music.forEach((music) =>{
     document.querySelector(".container").insertAdjacentHTML(
         "afterbegin",
