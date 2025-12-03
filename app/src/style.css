@@ -40,8 +40,7 @@ button {
     border-radius: 5px;
     text-align: center;
     padding: 10px;
-    color: black;
-    box-shadow: 5px 5px 15px grey;
+    box-shadow: 5px 5px 15px ;
     transition: 0.3s;
 }
 .card img{
