@@ -12,6 +12,7 @@
 --primary: var(--white);
   --secondary: var(--black);
 }
+
 .Title{
     font-size: 40px;
     font-style: Caveat Brush;

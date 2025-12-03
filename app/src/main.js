@@ -124,7 +124,7 @@ const music = [
     Name:"Where Have You Been",
     Artist:"Rihanna",
     Genre:"Pop",
-    Image:"src/Picture/Work.png",
+    Image:"src/Picture/WhereHaveYouBeen.png",
   },
 ];
 music.forEach((music) =>{
