@@ -139,7 +139,48 @@ music.forEach((music) =>{
     );
 }
 )
+function getcards(){
+  const buttons = document.querySelectorAll(".btn");
+  const btnArr = Array.from(buttons);
+  btnArr.forEach((btn) => 
+    btn.addEventListener("click", function (event){
+      console.log(
+        event.target.closest(".card").children[0].textContent
+      );
+    addToCart()
+  })
 
+);
+}
+getcards();
+
+function filterByGenre(Genre){
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card) =>{
+        const cardCategory = card.dataset.Genre
+        if (cardCategory === Genre || Genre === "All"){
+            card.style.display = "";
+        } else{
+            card.style.display = "none"
+        }
+    });
+}
+const filterbuttons = document.querySelectorAll(".Genre")
+filterbuttons.forEach((button) =>
+  button.addEventListener("click", function(event) {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card) => {
+      const cardCategory = card.dataset.Genre
+        if (cardCategory === event.target.textContent || event.target.textContent === "All"){
+            card.style.display = "";
+        } else{
+            card.style.display = "none"
+        }
+    }) 
+
+  }))
+  
+filterByGenre("All")
 document.querySelector(".btn_music").addEventListener("click", function () {
   if (document.body.classList.contains("Indie Rock")) {
   } else {
