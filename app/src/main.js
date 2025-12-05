@@ -179,7 +179,7 @@ filterbuttons.forEach((button) =>
     }) 
 
   }))
-  
+  sss
 filterByGenre("All")
 document.querySelector(".btn_music").addEventListener("click", function () {
   if (document.body.classList.contains("Indie Rock")) {

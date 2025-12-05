@@ -22,7 +22,7 @@
     border-radius: 15px;
 }
 button {
-  background-color: var(--primary-color);
+  background-color: var(--primary-color--);
 }
 .container{
     width: 90vw;
