@@ -8,26 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bestest Music Playlist Builder</title>
+    <link rel="stylesheet" href="./style.css">
   </head>
-
-
+  <body class="dark">
     <div id="app">
-
       <h1 class="Title">Bestest Music Playlist Builder</h1>
-
+      <button id="themeToggle">Toggle Dark/Light</button>
       <div id="filters">
         <button class="Genre">Indie Rock</button>
         <button class="Genre">Pop Rock</button>
       </div>
-
       <div>
         <h2 class="Title">Your Album</h2>
         <h3 class="Album"></h3>
-        <div class="Playlist"></div>
+        <div class="Playlist container"></div>
       </div>
-
     </div>
-
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

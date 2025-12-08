@@ -1,4 +1,5 @@
 import './style.css'
+
 const music = [
     {
     Name:"Do I Wanna Know ?",
@@ -17,6 +18,12 @@ const music = [
     Artist:"Arctic Monkeys",
     Genre:"Indie Rock",
     Image: "src/Picture/Arabella.png",
+  },
+    {
+    Name:"505",
+    Artist:"Arctic Monkeys",
+    Genre:"Indie Rock",
+    Image: "src/Picture/505.png",
   },
     {
     Name:"Believer",
@@ -127,63 +134,23 @@ const music = [
     Image:"src/Picture/WhereHaveYouBeen.png",
   },
 ];
-music.forEach((music) =>{
-    document.querySelector(".container").insertAdjacentHTML(
-        "afterbegin",
-        `<div class="card" data-brand="${music.Genre}" >
-        <h2>${music.Name}</h2>
-        <img src="${music.Image}"/>
-        <p>genre: ${music.Genre} </p>
-        <button class = "btn_music" data-name="${music.Name}"|>Add To Playlist</button>
-        </div>`
-    );
-}
-)
-function getcards(){
-  const buttons = document.querySelectorAll(".btn");
-  const btnArr = Array.from(buttons);
-  btnArr.forEach((btn) => 
-    btn.addEventListener("click", function (event){
-      console.log(
-        event.target.closest(".card").children[0].textContent
-      );
-    addToCart()
-  })
 
-);
-}
-getcards();
+const container = document.querySelector(".container");
 
-function filterByGenre(Genre){
-    const cards = document.querySelectorAll(".card");
-    cards.forEach((card) =>{
-        const cardCategory = card.dataset.Genre
-        if (cardCategory === Genre || Genre === "All"){
-            card.style.display = "";
-        } else{
-            card.style.display = "none"
-        }
-    });
-}
-const filterbuttons = document.querySelectorAll(".Genre")
-filterbuttons.forEach((button) =>
-  button.addEventListener("click", function(event) {
-    const cards = document.querySelectorAll(".card");
-    cards.forEach((card) => {
-      const cardCategory = card.dataset.Genre
-        if (cardCategory === event.target.textContent || event.target.textContent === "All"){
-            card.style.display = "";
-        } else{
-            card.style.display = "none"
-        }
-    }) 
+music.forEach((song) => {
+  container.insertAdjacentHTML(
+    "afterbegin",
+    `<div class="card" data-brand="${song.Genre}">
+      <h2>${song.Name}</h2>
+      <img src="${song.Image}"/>
+      <p>Genre: ${song.Genre}</p>
+      <button class="btn_music" data-name="${song.Name}">Add To Playlist</button>
+    </div>`
+  );
+});
 
-  }))
-  sss
-filterByGenre("All")
-document.querySelector(".btn_music").addEventListener("click", function () {
-  if (document.body.classList.contains("Indie Rock")) {
-  } else {
-    document.body.classList.contains("Pop Rock");
-  }
+const themeToggle = document.getElementById("themeToggle");
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light");
+  document.body.classList.toggle("dark");
 });
