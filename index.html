@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Music Playlist Builder</title>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <div class="header">
+    <h1>🎵 Music Playlist Builder</h1>
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search songs...">
+    </div>
+
+    <button id="toggleMode">Toggle Light/Dark</button>
+  </div>
+
+  <div class="genre-buttons" style="text-align:center;">
+    <button data-genre="All">All</button>
+    <button data-genre="Indie Rock">Indie Rock</button>
+    <button data-genre="Pop Rock">Pop Rock</button>
+    <button data-genre="Pop">Pop</button>
+    <button data-genre="R&B">R&B</button>
+    <button data-genre="Alternative Rock">Alternative Rock</button>
+  </div>
+
+  <div class="container" id="songContainer"></div>
+
+  <div class="add-song">
+    <h3>Add New Song</h3>
+    <input id="newTitle" placeholder="Song Name"><br>
+    <input id="newArtist" placeholder="Artist"><br>
+    <input id="newGenre" placeholder="Genre"><br>
+    <input id="newImage" placeholder="Album Art URL"><br>
+    <button id="addSongBtn">Add Song</button>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
