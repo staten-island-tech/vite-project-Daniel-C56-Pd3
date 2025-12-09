@@ -133,6 +133,18 @@ const music = [
     Genre:"Pop",
     Image:"src/Picture/WhereHaveYouBeen.png",
   },
+  {
+  Name:"Stressed Out",
+  Artist:"Twenty One Pilots",
+  Genre:"Alternative / Pop Rock",
+  Image:"src/Picture/StressedOut.png",
+  },
+  {
+  Name:"Counting Stars",
+  Artist:"OneRepublic",
+  Genre:"Pop Rock",
+  Image:"src/Picture/CountingStars.png",
+  },
 ];
 
 const container = document.querySelector(".container");
