@@ -1,7 +1,8 @@
 import './style.css'
 
+
 const music = [
-    {
+ {
     Name:"Do I Wanna Know ?",
     Artist: "Arctic Monkeys",
     Genre: "Indie Rock",
@@ -18,12 +19,6 @@ const music = [
     Artist:"Arctic Monkeys",
     Genre:"Indie Rock",
     Image: "src/Picture/Arabella.png",
-  },
-    {
-    Name:"505",
-    Artist:"Arctic Monkeys",
-    Genre:"Indie Rock",
-    Image: "src/Picture/505.png",
   },
     {
     Name:"Believer",
@@ -55,7 +50,7 @@ const music = [
     Genre:"Pop Rock",
     Image: "src/Picture/LoveStory.png",
   },
-    { 
+    {
     Name:"Cruel Summer",
     Artist:"Taylor Swift",
     Genre:"Pop Rock",
@@ -133,37 +128,115 @@ const music = [
     Genre:"Pop",
     Image:"src/Picture/WhereHaveYouBeen.png",
   },
-  {
-  Name:"Stressed Out",
-  Artist:"Twenty One Pilots",
-  Genre:"Alternative / Pop Rock",
-  Image:"src/Picture/StressedOut.png",
-  },
-  {
-  Name:"Counting Stars",
-  Artist:"OneRepublic",
-  Genre:"Pop Rock",
-  Image:"src/Picture/CountingStars.png",
-  },
 ];
+
 
 const container = document.querySelector(".container");
 
+
 music.forEach((song) => {
   container.insertAdjacentHTML(
-    "afterbegin",
+    "beforeend",
     `<div class="card" data-brand="${song.Genre}">
       <h2>${song.Name}</h2>
       <img src="${song.Image}"/>
-      <p>Genre: ${song.Genre}</p>
+      <p>genre: ${song.Genre}</p>
       <button class="btn_music" data-name="${song.Name}">Add To Playlist</button>
     </div>`
   );
 });
 
-const themeToggle = document.getElementById("themeToggle");
+
+const themeToggle = document.getElementById("toggleMode");
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("light");
   document.body.classList.toggle("dark");
 });
+const searchInput = document.getElementById("searchInput");
+const genreButtons = document.querySelectorAll(".genre-buttons button");
+const addSongBtn = document.getElementById("addSongBtn");
 
+
+function displaySongs(songList) {
+  container.innerHTML = "";
+
+
+  songList.forEach((song) => {
+    container.insertAdjacentHTML(
+      "beforeend",
+      `<div class="card">
+        <h2>${song.Name}</h2>
+        <img src="${song.Image}" />
+        <p>${song.Artist}</p>
+        <p>${song.Genre}</p>
+        <button class="btn-add">Add To Playlist</button>
+      </div>`
+    );
+  });
+}
+
+
+displaySongs(music);
+
+
+searchInput.addEventListener("input", () => {
+  const searchValue = searchInput.value.toLowerCase();
+
+
+  const filtered = music.filter(song =>
+    song.Name.toLowerCase().includes(searchValue) ||
+    song.Artist.toLowerCase().includes(searchValue)
+  );
+
+
+  displaySongs(filtered);
+});
+
+
+genreButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const genre = button.dataset.genre;
+
+
+    if (genre === "All") {
+      displaySongs(music);
+    } else {
+      const filtered = music.filter(song =>
+        song.Genre.includes(genre)
+      );
+      displaySongs(filtered);
+    }
+  });
+});
+
+
+addSongBtn.addEventListener("click", () => {
+  const title = document.getElementById("newTitle").value;
+  const artist = document.getElementById("newArtist").value;
+  const genre = document.getElementById("newGenre").value;
+  const image = document.getElementById("newImage").value;
+
+
+  if (!title || !artist || !genre || !image) {
+    alert("Please fill out all fields");
+    return;
+  }
+
+
+  const newSong = {
+    Name: title,
+    Artist: artist,
+    Genre: genre,
+    Image: image,
+  };
+
+
+  music.push(newSong);
+  displaySongs(music);
+
+
+  document.getElementById("newTitle").value = "";
+  document.getElementById("newArtist").value = "";
+  document.getElementById("newGenre").value = "";
+  document.getElementById("newImage").value = "";
+});

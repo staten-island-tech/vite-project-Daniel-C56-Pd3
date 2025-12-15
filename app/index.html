@@ -1,29 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bestest Music Playlist Builder</title>
-    <link rel="stylesheet" href="./style.css">
-  </head>
-  <body class="dark">
-    <div id="app">
-      <h1 class="Title">Bestest Music Playlist Builder</h1>
-      <button id="themeToggle">Toggle Dark/Light</button>
-      <div id="filters">
-        <button class="Genre">Indie Rock</button>
-        <button class="Genre">Pop Rock</button>
-      </div>
-      <div>
-        <div class="Playlist container"></div>
-        <h2 class="Title">Your Album</h2>
-        <h3 class="Album"></h3>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <title> Best Music Playlist Builder</title>
+
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+
+<body>
+
+
+  <div class="header">
+    <h1> Best Music Playlist Builder</h1>
+
+
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search songs...">
     </div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+
+
+    <button id="toggleMode">Toggle Light/Dark</button>
+  </div>
+
+
+  <div class="genre-buttons" style="text-align:center;">
+    <button data-genre="All">All</button>
+    <button data-genre="Indie Rock">Indie Rock</button>
+    <button data-genre="Pop Rock">Pop Rock</button>
+    <button data-genre="Pop">Pop</button>
+    <button data-genre="R&B">R&B</button>
+    <button data-genre="Alternative Rock">Alternative Rock</button>
+  </div>
+
+
+  <div class="container" id="songContainer"></div>
+
+
+  <div class="add-song">
+    <h3>Add New Song</h3>
+    <input id="newTitle" placeholder="Song Name"><br>
+    <input id="newArtist" placeholder="Artist"><br>
+    <input id="newGenre" placeholder="Genre"><br>
+    <input id="newImage" placeholder="Album Art URL"><br>
+    <button id="addSongBtn">Add Song</button>
+  </div>
+
+
+  <script type="module" src="/main.js"></script>
+</body>
 </html>
