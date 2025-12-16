@@ -1,53 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title> Best Music Playlist Builder</title>
-
-
-  <link rel="stylesheet" href="/style.css">
+   <link rel="stylesheet" href="./style.css">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" rel="stylesheet">
+   <title>Bestest Music Playlist Builder</title>
 </head>
+<body class="dark">
+       <h1 class="Title">Bestest Music Playlist Builder</h1>
+   <button id="themeToggle">Toggle Dark/Light</button>
 
 
-<body>
-
-
-  <div class="header">
-    <h1> Best Music Playlist Builder</h1>
-
-
-    <div class="search-bar">
-      <input type="text" id="searchInput" placeholder="Search songs...">
-    </div>
-
-
-    <button id="toggleMode">Toggle Light/Dark</button>
-  </div>
-
-
-  <div class="genre-buttons" style="text-align:center;">
-    <button data-genre="All">All</button>
-    <button data-genre="Indie Rock">Indie Rock</button>
-    <button data-genre="Pop Rock">Pop Rock</button>
-    <button data-genre="Pop">Pop</button>
-    <button data-genre="R&B">R&B</button>
-    <button data-genre="Alternative Rock">Alternative Rock</button>
-  </div>
-
-
-  <div class="container" id="songContainer"></div>
-
-
-  <div class="add-song">
-    <h3>Add New Song</h3>
-    <input id="newTitle" placeholder="Song Name"><br>
-    <input id="newArtist" placeholder="Artist"><br>
-    <input id="newGenre" placeholder="Genre"><br>
-    <input id="newImage" placeholder="Album Art URL"><br>
-    <button id="addSongBtn">Add Song</button>
-  </div>
-
-
-  <script type="module" src="/main.js"></script>
+   <form id="addSongForm">
+      <input type="text" id="songName" placeholder="Song Name" required>
+      <input type="text" id="songArtist" placeholder="Artist" required>
+      <input type="text" id="songGenre" placeholder="Genre" required>
+      <input type="text" id="songImage" placeholder="Image URL" required>
+      <button type="submit">Add Song</button>
+   </form>
+  
+   <div id="filters">
+               <button class="Genre">All</button>
+       <button class="Genre">Indie Rock</button>
+       <button class="Genre">Pop Rock</button>
+       <button class="Genre">Alternative Rock</button>
+       <button class="Genre">Pop</button>
+       <button class="Genre">R&B / Synthwave</button>
+       <button class="Genre">R&B / Pop</button>
+       <button class="Genre">R&B / Alternative</button>
+   </div>
+  
+       <div class="container">
+    
+   </div>
+  
+       <h2 class="Title">Your Album</h2>
+       <div class="Album">
+           </div>
+  
 </body>
+       <script type="module" src="/src/main.js"></script>
+
+
 </html>
