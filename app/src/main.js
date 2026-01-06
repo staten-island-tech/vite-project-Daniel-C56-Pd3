@@ -126,7 +126,7 @@ const music = [
   Name:"Where Have You Been",
   Artist:"Rihanna",
   Genre:"Pop",
-  Image:"public/WhereHaveYouBeen.png",
+  Image:"/WhereHaveYouBeen.png",
 },
 ];
 
